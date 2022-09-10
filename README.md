@@ -21,9 +21,15 @@ composer require laravel/ui "^3.0"
 # uiのコマンドヘルプ
 php artisan ui -h
 
+# マイグレーション
+php artisan migrate
+
+## マイグレーションのロールバック（１つ前の状態に戻す）
+php artisan migrate:rollback
+
 # node.js関連のライブラリをインストール dev のコマンドを実行
 npm install && npm run dev
-※上記でエラーが出る場合、以下のコマンドでsass-loaderのバージョンを落とす。&webpack.mix.jsの「.vue()」をコメントアウト
+## 上記でエラーが出る場合、以下のコマンドでsass-loaderのバージョンを落とす。&webpack.mix.jsの「.vue()」をコメントアウト
 npm install sass-loader@10.1.1
 
 
@@ -31,7 +37,10 @@ npm install sass-loader@10.1.1
 http://127.0.0.1:8085/
 
 # 参考
-https://github.com/YasuakiHirano/
+https://github.com/YasuakiHirano/simple_memo_laravel
+## パート別
+https://github.com/YasuakiHirano/simple_memo_laravel/commits/
+
 https://github.com/laravel/ui
 
 
