@@ -27,6 +27,9 @@ php artisan migrate
 ## マイグレーションのロールバック（１つ前の状態に戻す）
 php artisan migrate:rollback
 
+# フォームリクエストの作成
+php artisan make:request UserCreateRequest
+
 # node.js関連のライブラリをインストール dev のコマンドを実行
 npm install && npm run dev
 ## 上記でエラーが出る場合、以下のコマンドでsass-loaderのバージョンを落とす。&webpack.mix.jsの「.vue()」をコメントアウト
