@@ -11,7 +11,8 @@ class RedirectIfAuthenticated
 {
     /**
      * Handle an incoming request.
-     *
+     * ログイン済みの場合、ログイン画面に遷移させない
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
      * @param  string|null  ...$guards
@@ -23,7 +24,7 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+                return redirect('/memo');
             }
         }
 
