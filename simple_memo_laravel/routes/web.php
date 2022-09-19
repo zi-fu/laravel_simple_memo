@@ -28,6 +28,11 @@ Route::post('/user/register', [RegisterController::class,'register'])->name('use
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/memo', [MemoController::class, 'index'])->name('memo.index');
     Route::get('/memo/add', [MemoController::class, 'add'])->name('memo.add');
+    Route::get('/memo/select', [MemoController::class, 'select'])->name('memo.select');
+    Route::get('logout', [LoginController::class, 'logout'])->name('memo.logout');
+
+    Route::post('/memo/update', [MemoController::class, 'update'])->name('memo.update');
+    Route::post('/memo/delete', [MemoController::class, 'delete'])->name('memo.delete');
 });
 
 Auth::routes();
